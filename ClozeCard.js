@@ -11,24 +11,18 @@ function ClozeCard (text, cloze) {
 	  this.fullText = text;
 	  this.cloze = cloze;
 	  this.partial = text.replace(cloze, '______');
-    console.log(this.partial);
+    // console.log(this.partial);
   }else{
     return new ClozeCard(text, cloze);
   }
 }
-
 module.exports = ClozeCard;
-
+//Two working Flashcards
 var firstPresident = BasicCard("Who was the first president of the United States?", "George Washington");
-console.log(firstPresident.front);
-// "George Washington"
-console.log(firstPresident.back);
 var firstPresidentCloze = ClozeCard("George Washington was the first president of the United States.", "George Washington");
-// "George Washington"
-console.log(firstPresidentCloze.cloze);
-// " ... was the first president of the United States.
-console.log(firstPresidentCloze.partial);
-// "George Washington was the first president of the United States.
-console.log(firstPresidentCloze.fullText);
-// Should throw or log an error because "oops" doesn't appear in "This doesn't work"
-var brokenCloze = ClozeCard("This doesn't work", "oops");
+
+
+console.log("Basic Card Front: " + firstPresident.front + "\n"
++ "Basic Card Back: " + firstPresident.back);
+console.log("Cloze Card with Partial : " + firstPresidentCloze.partial + "\n"
++ "Cloze Card Complete: " + firstPresidentCloze.fullText);
