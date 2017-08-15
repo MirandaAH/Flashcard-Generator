@@ -13,9 +13,11 @@
 
 ```
 To build a basic card, simply enter your question and answer into the Basic Card function.
+
 BasicCard("Who was the first President of the United States?", "George Washington");
 
 To build a Cloze-Deletion Card, simply enter your statement and text to be deleted into the Cloze Card function.
+
 ClozeCard("George Washington was the first President of the United States", "George Washington")
 
 
